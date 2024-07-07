@@ -444,39 +444,103 @@ ev();
 
 // console.log(output);
 
-// const user = [
-//   { firstName: "Sahana", latName: "Banerjee", age: "25" },
-//   { firstName: "Sohini", latName: "Ghosh", age: "29" },
-//   { firstName: "Sulagna", latName: "Paul", age: "34" },
-//   { firstName: "Sasnthita", latName: "Biswas", age: "20" },
-//   { firstName: "Basundhara", latName: "Sinha", age: "25" },
+// //js array length
+// const a = ["abc", "xyz", "edf", "opc"];
+// console.log(a.length);
+//js array push
+// const a = ["abc", "xyz", "edf", "opc"];
+// console.log(a.push("sahu"));
+// console.log(a);
+//js splice
+// const a = ["abc", "xyz", "edf", "opc"];
+// a.splice(1, 0, "sah2");
+// console.log(a);
+//js array example for loop
+// const a = [10, 20, 30, 40, 50, 60];
+// for (var i = 0; i < a.length; i++) {
+//   console.log(a[i]);
+// }
+//for in
+// const a = [10, 20, 30, 40, 50, 60];
+// for (let ar in a) {
+//   console.log(ar);
+//
+// }
+// const a = [10, 20, 30, 40, 50, 60];
+// for (let ar in a) {
+//   console.log(a[ar]);
+// }
+//for of
+// const a = [10, 20, 30, 40, 50, 60];
+// for (let ar of a) {
+//   console.log(ar);
+// }
+//multidimensanal array
+
+// const array = [
+//   ["sahu", 25],
+//   ["sahana", 24],
+//   ["abc", 35],
+//   ["xyz", 46],
 // ];
 
-// const output = user.map((users) => users.firstName + " " + users.latName);
-// console.log(output);
+// array.forEach((data) => {
+//   data.forEach((value) => {
+//     console.log(value);
+//   });
+// });
+//Array Destructuring :-
 
-// const ageOutput = user.reduce((acc, curr) => {
-//   if (acc[curr.age]) {
-//     acc[curr.age] = ++acc[curr.age];
-//   } else {
-//     acc[curr.age] = 1;
+// const array = ["abc", "xyz", "ilk", "klo"];
+// const [item1, item2, item3, item4] = array;
+// console.log(item1);
+// console.log(item2);
+// console.log(item3);
+// console.log(item4);
+
+//Array Destructuring Using Spread operator
+
+// const array = ["abc", "xyz", "ilk", "klo"];
+// const [...item] = array;
+// console.log(item);
+//javascript constructor
+
+// function User(name) {
+//   this.name = name;
+// }
+// let person = new User("John");
+// console.log(person.name);
+
+//js symbol is an unique identifier
+
+// const sym = Symbol("id");
+// console.log(sym);
+// console.log(sym.toString());
+// console.log(sym.description);
+
+//why Symbol is unique
+// const sym1 = Symbol("id");
+// const sym2 = Symbol("id");
+// console.log(sym1 === sym2);
+
+//recursion function
+
+// function printRecursionNumber(n) {
+//   if (n <= 10) {
+//     console.log(n);
+//     printRecursionNumber(n + 1);
 //   }
-//   return acc;
-// }, {});
+// }
+// printRecursionNumber(1);
 
-// console.log(ageOutput);
+//factorial using recurssion
 
-// //filter age then show the name using filter and map
-// const filterAgeOutput = user
-//   .filter((users) => users.age < 30)
-//   .map((users) => users.firstName);
-// console.log(filterAgeOutput);
+function factorial(n) {
+  if (n == 0) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
+console.log(factorial(5));
 
-// //filter age then show the name using reduce
-// const filterAgeOutput1 = user.reduce((acc, curr) => {
-//   if (curr.age > 30) {
-//     acc.push[acc.firstName];
-//   }
-//   return acc;
-// }, []);
-// console.log(filterAgeOutput1);
