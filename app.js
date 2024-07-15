@@ -535,12 +535,112 @@ ev();
 
 //factorial using recurssion
 
-function factorial(n) {
-  if (n == 0) {
-    return 1;
-  } else {
-    return n * factorial(n - 1);
-  }
-}
-console.log(factorial(5));
+// function factorial(n) {
+//   if (n == 0) {
+//     return 1;
+//   } else {
+//     return n * factorial(n - 1);
+//   }
+// }
+// console.log(factorial(5));
 
+//promise
+
+// function prom(task) {
+//   return new Promise((resolve, reject) => {
+//     if (task) {
+//       resolve("Task is completed");
+//     } else {
+//       reject("Task is rejected");
+//     }
+//   });
+// }
+// let onResolve = (res) => {
+//   console.log(res);
+// };
+// let onReject = (err) => {
+//   console.log(err);
+// };
+
+// prom(false).then(onResolve).catch(onReject);
+
+//SetIntervals
+// let num = 0;
+
+// function sum() {
+//   num = num + 6;
+//   console.log(num);
+// }
+// setInterval(sum, 9000);
+
+//SetIntervals for time
+
+// function func() {
+//   let date = new Date().toLocaleTimeString();
+//   console.log(date);
+// }
+
+// setInterval(func, 1000);
+
+//second largest number
+
+// function findSecondLargest(arr) {
+//   arr.sort();
+//   for (let i = arr.length - 2; i >= 0; i--) {
+//     if (arr[i] !== arr[arr.length - 1]) {
+//       return "The second largest element is " + arr[i];
+//     }
+//   }
+
+//   return "There is no second largest element";
+// }
+// const arr = [12, 35, 10, 35, 10, 34, 1];
+// console.log(findSecondLargest(arr));
+
+//second largest number in array without using method
+
+// f
+// how many highest numbers are there in array
+
+// function largestElement(arr) {
+//   var count = 0;
+//   var max = 0;
+//   for (var i = 0; i < arr.length; i++) {
+//     if (arr[i] >= max) {
+//       if (arr[i] != max) {
+//         max = arr[i];
+//         count = 0;
+//       }
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+// const num1 = [
+//   10, 77, 15, 28, 20, 98, 13, 28, 77, 28, 28, 77, 77, 66, 77, 100, 100,
+// ];
+// const result = largestElement(num1);
+
+// console.log("The largest element in the array is:" + result);
+
+var a = "hello world";
+var b = "ld";
+
+function isSubstring(str, subStr) {
+  let strLength = str.length;
+  let subStrLength = subStr.length;
+  for (let i = 0; i <= strLength - subStrLength; i++) {
+    for (let j = 0; j < subStrLength; j++) {
+      if (str[i + j] !== subStr[j]) {
+        break;
+      }
+    }
+    if (j === subStrLength) {
+      return true;
+    }
+  }
+  return false;
+}
+let isPresent = isSubstring(a, b);
+console.log(isPresent);
